@@ -23,99 +23,136 @@ body {
   align-items: center;
 }
 
-.card {
-  display: flex;
-  width: 60rem;
-
-  .card-body {
-    width: 40%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: $darkDesaturateBlue;
-    padding: 2rem 5rem 2.5rem 4rem;
-
-    h3 {
-      color: $white;
-      font-family: $fontInter;
-      font-size: 30px;
-      text-align: start;
-    }
-
-    p {
-      color: $slightlyTransparentWhite;
-      font-family: $fontLexend;
-      line-height: 1.9;
-      font-size: 12px;
-    }
-
-    span {
-      color: $softViolet;
-    }
-  }
-
-  .card-footer {
+@media (min-width: 900px) {
+  .card {
     display: flex;
-    justify-content: space-between;
-    margin-top: 2.5rem;
-    width: 17.5rem;
-    p {
-      color: $white;
-      font-size: 16px;
-      font-family: $fontInter;
-      font-weight: 700;
-      margin: 0;
+    width: 60rem;
+
+    .card-body {
+      width: 70%;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      background-color: $darkDesaturateBlue;
+      padding: 2rem 5rem 2.5rem 4rem;
+
+      h3 {
+        color: $white;
+        font-family: $fontInter;
+        font-size: 30px;
+        text-align: start;
+      }
+
+      p {
+        color: $slightlyTransparentWhite;
+        font-family: $fontLexend;
+        line-height: 1.9;
+        font-size: 14px;
+      }
+
+      span {
+        color: $softViolet;
+      }
     }
 
-    span {
-      color: $slightlyTransparentWhite;
-      font-size: 10px;
-      font-family: $fontLexend;
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3.5rem;
+      width: 18rem;
+      p {
+        color: $white;
+        font-size: 18px;
+        font-family: $fontInter;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      span {
+        color: $slightlyTransparentWhite;
+        font-size: 12px;
+        font-family: $fontLexend;
+      }
     }
-  }
 
-  .card-img {
-    position: relative;
-    width: 50%;
-
-    img {
+    .card-img {
+      background: linear-gradient(
+          rgba($softViolet, 0.5),
+          rgba($softViolet, 0.5)
+        ),
+        url(image-header-desktop.jpg) no-repeat;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      inset: 0;
-      background-color: rgba($softViolet, 0.6);
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
+      height: 50vh;
+      background-size: cover;
     }
   }
 }
 
 @media (max-width: 900px) {
   .card {
+    display: flex;
     flex-direction: column-reverse;
-    width: 30rem;
-  }
-
-  .card-body {
-    width: 100%;
-  }
-
-  .card-footer {
-    flex-direction: column;
+    width: 22rem;
     text-align: center;
-  }
 
-  .card-img {
-    width: 100%;
+    .card-body {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-color: $darkDesaturateBlue;
+      padding: 1.2rem 2rem;
+
+      h3 {
+        color: $white;
+        font-family: $fontInter;
+        font-size: 30px;
+      }
+
+      p {
+        color: $slightlyTransparentWhite;
+        font-family: $fontLexend;
+        line-height: 1.9;
+        font-size: 16px;
+        margin-bottom: 1.4rem;
+      }
+
+      span {
+        color: $softViolet;
+      }
+    }
+
+    .card-img {
+      background-image: linear-gradient(
+          rgba($softViolet, 0.6),
+          rgba($softViolet, 0.6)
+        ),
+        url(image-header-mobile.jpg);
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      height: 16rem;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .card-footer {
+      p {
+        color: $white;
+        font-size: 19px;
+        font-family: $fontInter;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      span {
+        color: $slightlyTransparentWhite;
+        font-size: 11px;
+        font-family: $fontLexend;
+      }
+
+      div {
+        margin: 1rem;
+      }
+    }
   }
 }
